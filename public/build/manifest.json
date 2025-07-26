@@ -1,0 +1,44 @@
+{
+  "_ui-B2BSQXGr.js": {
+    "file": "assets/ui-B2BSQXGr.js",
+    "name": "ui"
+  },
+  "_vendor-B1JNiWxU.js": {
+    "file": "assets/vendor-B1JNiWxU.js",
+    "name": "vendor"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CrH0H8he.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/components.css": {
+    "file": "assets/components-i3JNhsKp.css",
+    "src": "resources/css/components.css",
+    "isEntry": true
+  },
+  "resources/css/shop-critical.css": {
+    "file": "assets/shop-critical-BBGjzSZO.css",
+    "src": "resources/css/shop-critical.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-B4g02kxl.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_ui-B2BSQXGr.js",
+      "_vendor-B1JNiWxU.js"
+    ],
+    "css": [
+      "assets/app-DvB2Xm2x.css"
+    ]
+  },
+  "resources/js/shop-fallback.js": {
+    "file": "assets/shop-fallback-zQuxiG19.js",
+    "name": "shop-fallback",
+    "src": "resources/js/shop-fallback.js",
+    "isEntry": true
+  }
+}

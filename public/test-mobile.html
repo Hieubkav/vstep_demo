@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/mobile-menu.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <header class="font-sans relative">
+        <!-- Header mặc định ở đầu trang -->
+        <div class="absolute top-0 left-0 w-full z-20">
+            <div class="flex items-center justify-between gap-5 w-full min-h-[110px] px-6 bg-black/30 backdrop-blur-sm border-b border-white/80">
+                <!-- Logo -->
+                <div class="w-1/4">
+                    <img src="https://stepv.studio/wp-content/uploads/2024/08/png_logo-2-1024x1024.png" alt="Logo" class="h-20 w-auto">
+                </div>
+
+                <!-- Navigation Desktop -->
+                <nav class="hidden lg:flex justify-center w-1/2">
+                    <ul class="flex items-center space-x-2">
+                        <li><a href="#" class="px-5 py-2 uppercase font-semibold text-sm text-white">Homepage</a></li>
+                        <li><a href="#" class="px-5 py-2 uppercase font-semibold text-sm text-white">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Nút Contact và Menu Mobile -->
+                <div class="flex items-center justify-end w-1/4">
+                    <!-- Hamburger Icon -->
+                    <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden text-white text-2xl focus:outline-none">
+                        <i id="hamburger-icon" class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-50 lg:hidden">
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="mobile-menu-backdrop"></div>
+            
+            <!-- Menu Panel -->
+            <div class="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-lg shadow-2xl">
+                <!-- Header Menu -->
+                <div class="flex items-center justify-between p-6 border-b border-white/20">
+                    <img src="https://stepv.studio/wp-content/uploads/2024/08/png_logo-2-1024x1024.png" alt="Logo" class="h-12 w-auto">
+                    <button id="mobile-menu-close" class="text-white text-2xl focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- Navigation Links -->
+                <nav class="p-6">
+                    <ul class="space-y-4">
+                        <li><a href="#" class="block py-3 px-4 text-lg font-semibold text-white uppercase">Homepage</a></li>
+                        <li><a href="#" class="block py-3 px-4 text-lg font-semibold text-white uppercase">Contact</a></li>
+                        <li><a href="#" class="block py-3 px-4 text-lg font-semibold text-white uppercase">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-8">Mobile Menu Test</h1>
+            <p class="text-lg">Resize your browser to mobile size and click the hamburger menu.</p>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+
+            function openMobileMenu() {
+                mobileMenu.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                hamburgerIcon.classList.remove('fa-bars');
+                hamburgerIcon.classList.add('fa-times');
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('show');
+                document.body.style.overflow = '';
+                hamburgerIcon.classList.remove('fa-times');
+                hamburgerIcon.classList.add('fa-bars');
+            }
+
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+            mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import './fonts.css';
+@import './video-optimization.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for Step V Studio */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Ensure dark theme */
+html, body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Smooth animations */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+/* Hide elements with x-cloak */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom button styles */
+.btn-primary {
+    @apply bg-white text-black px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-gray-200 transition-all duration-300;
+}
+
+.btn-secondary {
+    @apply border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-all transform hover:scale-105;
+}
+
+/* Navbar specific styles */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Navigation link styles */
+.nav-link {
+    @apply font-medium text-sm uppercase tracking-wide transition-colors;
+}
+
+.nav-link:hover {
+    @apply text-gray-300;
+}
+
+.nav-link.active {
+    @apply text-stepv-primary;
+}
+
+/* Gallery artistic effects */
+.bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Gallery masonry columns */
+.gallery-masonry {
+    column-fill: balance;
+    column-gap: 0.5rem;
+}
+
+/* Artistic blur effects */
+.blur-artistic {
+    filter: blur(20px);
+    opacity: 0.7;
+}

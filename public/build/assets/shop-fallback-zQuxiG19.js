@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector("header");e&&typeof Alpine>"u"&&window.addEventListener("scroll",()=>{window.scrollY>50?e.classList.add("bg-black/80","backdrop-blur-md"):e.classList.remove("bg-black/80","backdrop-blur-md")})});

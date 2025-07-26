@@ -1,0 +1,59 @@
+/* Critical CSS for Step V Studio Shop Layout */
+/* Base styles for immediate rendering */
+html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Alpine.js cloak handling */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Header visibility fixes */
+header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+header nav {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+header nav a,
+header nav button {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: inline-flex !important;
+}
+
+/* Navbar scroll effects */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Navigation styles */
+.nav-link {
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d1d5db;
+}
+
+.nav-link.active {
+    color: #10b981;
+}

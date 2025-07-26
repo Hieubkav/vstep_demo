@@ -1,0 +1,36 @@
+/* Mobile Menu Debug Styles */
+@media (max-width: 1023px) {
+    .mobile-menu-btn {
+        display: block !important;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px;
+        border-radius: 4px;
+    }
+    
+    .mobile-menu-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+    transform: translateX(0);
+}
+
+/* Ensure FontAwesome icons are visible */
+.fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}

@@ -1,0 +1,113 @@
+/* Step V Studio Components Styles */
+
+/* Section Wrapper */
+.section-wrapper {
+    @apply relative overflow-hidden;
+}
+
+/* Hero Component */
+.hero-video-container {
+    @apply relative w-full h-screen overflow-hidden;
+}
+
+.hero-overlay {
+    @apply absolute inset-0 bg-black/40 z-10;
+}
+
+.hero-content {
+    @apply relative z-20 flex items-center justify-center h-full text-center;
+}
+
+/* Gallery Component */
+.gallery-grid {
+    @apply grid gap-4 p-4;
+}
+
+.gallery-item {
+    @apply relative overflow-hidden rounded-lg cursor-pointer;
+}
+
+.gallery-item img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.gallery-item:hover img {
+    @apply scale-110;
+}
+
+/* Card Components */
+.service-card {
+    @apply bg-gray-900 rounded-xl p-6 border border-gray-800 transition-all duration-300 hover:border-stepv-primary hover:transform hover:-translate-y-2;
+}
+
+.stats-card {
+    @apply text-center p-6;
+}
+
+.stats-number {
+    @apply text-4xl md:text-5xl font-bold text-white mb-2;
+}
+
+.stats-label {
+    @apply text-gray-400 text-sm uppercase tracking-wide;
+}
+
+/* Button Components */
+.btn-primary {
+    @apply bg-white text-black px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:bg-gray-200 hover:transform hover:scale-105;
+}
+
+.btn-secondary {
+    @apply border-2 border-white text-white bg-transparent px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:bg-white hover:text-black hover:transform hover:scale-105;
+}
+
+.btn-ghost {
+    @apply text-white border border-gray-600 px-6 py-2 rounded-lg transition-all duration-300 hover:border-white hover:bg-white hover:text-black;
+}
+
+/* Form Components */
+.form-input {
+    @apply w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-stepv-primary focus:ring-1 focus:ring-stepv-primary transition-colors;
+}
+
+.form-textarea {
+    @apply w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-stepv-primary focus:ring-1 focus:ring-stepv-primary transition-colors resize-none;
+}
+
+/* Animation Classes */
+.fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+}
+
+.fade-in.active {
+    @apply opacity-100 translate-y-0;
+}
+
+.slide-in-left {
+    @apply opacity-0 -translate-x-8 transition-all duration-700 ease-out;
+}
+
+.slide-in-left.active {
+    @apply opacity-100 translate-x-0;
+}
+
+.slide-in-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700 ease-out;
+}
+
+.slide-in-right.active {
+    @apply opacity-100 translate-x-0;
+}
+
+/* Utility Classes */
+.text-gradient {
+    @apply bg-gradient-to-r from-stepv-primary to-blue-500 bg-clip-text text-transparent;
+}
+
+.glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-stepv-primary/25;
+}
